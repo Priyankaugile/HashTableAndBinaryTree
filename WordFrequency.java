@@ -1,17 +1,19 @@
 
-package com.hashtableandbinarytree;
-
+import java.security.Key;
 import java.util.HashMap;
-import  java.util.Map;
+import java.util.Map;
 
-public class FindFrequency {
+public class WordFrequency {
     public static void main(String[] args) {
-        String str = "To be or not to be";
+        String str = "Paranoids are not paranoid because they are paranoid but " +
+                "because they keep putting themselves deliberately " +
+                "into paranoid avoidable situations";
 
         String [] strArray = str.split(" ");
-         Map<String,Integer> map = new HashMap<String,Integer>();
+        Map<String,Integer> map = new HashMap<String,Integer>();
 
         for (String word : strArray){
+            word.hashCode();
             Integer number = map.get(word);
             if (number == null){
                 number = 1;
@@ -26,4 +28,5 @@ public class FindFrequency {
         }
     }
 }
+
 
